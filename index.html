@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday My Love ❤</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sign-In Page -->
+    <div id="loginPage" class="login-page">
+        <div class="login-container">
+            <div class="login-box">
+                <h1 class="login-title">Welcome, My Love ❤</h1>
+                <p class="login-subtitle">Enter your special credentials</p>
+                <form id="loginForm" class="login-form">
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                        <p class="password-hint">💡 Password Hint: What was the first nickname I gave you?</p>
+                    </div>
+                    <div id="errorMessage" class="error-message"></div>
+                    <button type="submit" class="login-btn">Sign In ❤</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Birthday Website -->
+    <div id="mainContent" class="main-content hidden">
+        <!-- Background Music -->
+        <div class="music-player">
+            <button id="musicToggle" class="music-btn">🎵 Play Music</button>
+            <audio id="backgroundMusic" loop preload="auto">
+                <source src="Stephen_Sanchez_-_Until_I_Found_You_(mp3.pm).mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+        <!-- Confetti Canvas -->
+        <canvas id="confettiCanvas"></canvas>
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Happy Birthday My Love ❤</h1>
+                <p class="hero-subtitle">Today is all about you, beautiful!</p>
+                <div class="floating-hearts">
+                    <span>❤</span>
+                    <span>💕</span>
+                    <span>💖</span>
+                    <span>💗</span>
+                    <span>💝</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Countdown Section -->
+        <section class="countdown-section">
+            <h2 class="section-title">Countdown to Your Special Day</h2>
+            <div id="countdown" class="countdown-container">
+                <div class="countdown-item">
+                    <span id="days" class="countdown-number">0</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="hours" class="countdown-number">0</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="minutes" class="countdown-number">0</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="seconds" class="countdown-number">0</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Messages Section -->
+        <section class="messages-section">
+            <h2 class="section-title">Tap to Reveal Messages 💌</h2>
+            <div class="messages-grid">
+                <div class="message-card" data-message="You light up my world every single day! ✨">
+                    <div class="card-front">💝</div>
+                    <div class="card-back">You light up my world every single day! ✨</div>
+                </div>
+                <div class="message-card" data-message="Your smile is my favorite thing in the world! 😊">
+                    <div class="card-front">💖</div>
+                    <div class="card-back">Your smile is my favorite thing in the world! 😊</div>
+                </div>
+                <div class="message-card" data-message="I fall in love with you more every day! 💕">
+                    <div class="card-front">💗</div>
+                    <div class="card-back">I fall in love with you more every day! 💕</div>
+                </div>
+                <div class="message-card" data-message="You are my everything! 🌟">
+                    <div class="card-front">💞</div>
+                    <div class="card-back">You are my everything! 🌟</div>
+                </div>
+                <div class="message-card" data-message="Thank you for being you! 💜">
+                    <div class="card-front">💟</div>
+                    <div class="card-back">Thank you for being you! 💜</div>
+                </div>
+                <div class="message-card" data-message="You make every day special! 🌈">
+                    <div class="card-front">💙</div>
+                    <div class="card-back">You make every day special! 🌈</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reasons Why I Love You Carousel -->
+        <section class="reasons-section">
+            <h2 class="section-title">Reasons Why I Love You 💕</h2>
+            <div class="carousel-container">
+                <button class="carousel-btn prev" id="prevBtn">‹</button>
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="carousel-slide">
+                        <div class="reason-card">
+                            <div class="reason-icon">😊</div>
+                            <h3>Your Beautiful Smile</h3>
+                            <p>Your smile can brighten even the darkest days and makes my heart skip a beat every time.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="reason-card">
+                            <div class="reason-icon">💭</div>
+                            <h3>Your Kind Heart</h3>
+                            <p>Your compassion and kindness towards me and others shows the beautiful soul you have.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="reason-card">
+                            <div class="reason-icon">🎭</div>
+                            <h3>Your Sense of Humor</h3>
+                            <p>You make me laugh like no one else can, and your joy is absolutely contagious.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="reason-card">
+                            <div class="reason-icon">🌟</div>
+                            <h3>Your Ambition</h3>
+                            <p>I admire your drive and determination to achieve your dreams. You inspire me every day.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="reason-card">
+                            <div class="reason-icon">💬</div>
+                            <h3>Our Conversations</h3>
+                            <p>I could talk to you for hours and never get bored. You're my best friend and my love.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="reason-card">
+                            <div class="reason-icon">❤️</div>
+                            <h3>Everything About You</h3>
+                            <p>From the way you laugh to how you care, I love every single thing about you.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn next" id="nextBtn">›</button>
+            </div>
+            <div class="carousel-dots" id="carouselDots"></div>
+        </section>
+
+        <!-- Memory Gallery -->
+        <section class="gallery-section">
+            <h2 class="section-title">Your Beautiful Memories 📸</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="img 1.jpg" alt="Memory 1">
+                    <div class="gallery-overlay">
+                        <p>JSYK you are beautiful😍😘</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img 4.jpg" alt="Memory 2">
+                    <div class="gallery-overlay">
+                        <p>Amazing</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img 3.jpg" alt="Memory 3">
+                    <div class="gallery-overlay">
+                        <p>Hot🔥</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img 5.jpg" alt="Memory 4">
+                    <div class="gallery-overlay">
+                        <p>I love your smile😊</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img 6.jpg" alt="Memory 5">
+                    <div class="gallery-overlay">
+                        <p>Cold🥶</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <video src="vid 1.mp4" autoplay muted loop playsinline></video>
+                    <div class="gallery-overlay">
+                        <p>Forever Grateful</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Love Letter Section -->
+        <section class="letter-section">
+            <h2 class="section-title">A Letter From My Heart, not from any Ai but from me Personally 💌</h2>
+            <div class="letter-container">
+                <div class="letter-content">
+                    <p class="letter-greeting">Mytolani,</p>
+                    <p>On this special day, I want you to know how incredibly blessed I am to have you in my life. You are not just my girlfriend, but my best friend, my buddy, and my greatest source of happiness.</p>
+                    <p>Every day with you feels like a celebration. Your presence brings light into my world, and your love fills my heart with joy beyond measure. I cherish every moment we spend together, text, every laugh we share, and every memory we create.</p>
+                    <p>You are beautiful inside and out, and I am constantly amazed by your strength, kindness, and the way you care for those around you. You inspire me to be a better person every single day.</p>
+                    <p>On your birthday, I wish you all the happiness, love, and beautiful moments that you deserve. May this coming year(2026) bring you endless joy, success in all your endeavors, and dreams that come true.</p>
+                    <p>Thank you for being you, and thank you for choosing to share your life with me. I love you more than words can express, and I'm excited for all the beautiful adventures we have ahead of us.</p>
+                    <p class="letter-signature">Forever yours,<br>With all my love ❤</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section class="quiz-section">
+            <h2 class="section-title">How Well i Know you? 🎯</h2>
+            <div class="quiz-container">
+                <div id="quizContent" class="quiz-content">
+                    <div id="quizQuestion" class="quiz-question"></div>
+                    <div id="quizOptions" class="quiz-options"></div>
+                    <div id="quizFeedback" class="quiz-feedback"></div>
+                    <button id="nextQuestionBtn" class="quiz-btn hidden">Next Question →</button>
+                </div>
+                <div id="quizResults" class="quiz-results hidden">
+                    <h3>Quiz Complete! 🎉</h3>
+                    <p id="quizScore"></p>
+                    <button id="restartQuizBtn" class="quiz-btn">Play Again</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Special Surprise Button -->
+        <section class="surprise-section">
+            <button id="surpriseBtn" class="surprise-btn">🎁 Click for a Special Surprise</button>
+        </section>
+
+        <!-- Image Gallery Overlay for Surprise -->
+        <div id="imageGalleryOverlay" class="image-gallery-overlay hidden">
+            <canvas id="surpriseConfettiCanvas"></canvas>
+            <button class="gallery-close-btn" id="galleryCloseBtn" style="display: none;">&times;</button>
+            <div class="image-gallery-container">
+                <div id="imageGalleryContent" class="image-gallery-content"></div>
+            </div>
+        </div>
+
+        <!-- Surprise Modal -->
+        <div id="surpriseModal" class="modal hidden">
+            <div class="modal-content">
+                <span class="modal-close">&times;</span>
+                <div class="modal-body">
+                    <h2>My Special Surprise for You 💝</h2>
+                    <p>MyTolani,</p>
+                    <p>This website is just a small token of how much you mean to me. Every line of code, every animation, every word was crafted with love, just for you.</p>
+                    <p>You are my sunshine, my happiness, and my greatest blessing. I wanted to create something special that you can look back on and remember how much you are loved.</p>
+                    <p>Thank you for being the amazing person you are. Thank you for loving me, supporting me, and being my partner in this beautiful journey called life.</p>
+                    <p>I love you more than all the stars in the sky, more than all the grains of sand on every beach, and more than words could ever express.</p>
+                    <p class="modal-signature">Happy Birthday, my love! 🎂🎉❤️</p>
+                    <p class="modal-signature">Forever and always,<br>Your loving partner Adewale 💕</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
