@@ -416,7 +416,7 @@ function showResults() {
     let message = '';
     
     if (percentage === 100) {
-        message = 'Perfect! You know me inside and out! I love you so much! 💕💕💕';
+        message = 'Perfect! I know me inside and out! I love you so much! 💕💕💕';
     } else if (percentage >= 80) {
         message = `Amazing! You got ${score} out of ${quizQuestions.length} correct! I really know you well! ❤️`;
     } else if (percentage >= 60) {
